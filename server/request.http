@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "kimkim",
+    "password": "kimne"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "kimkim",
+    "password": "kimne"
+}
+
+###
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTcyOThhMTUyOWNlMWY4YzYwZjc1OTYiLCJpYXQiOjE3MDIwMDkwMzV9.XYINl_VN9svOPJM3QxkciRaI5pC5xg7-e60aHaw-XNg
+
+{
+    "title": "this is kim's title5",
+    "description": "this is description5 of kim",
+    "url": "google.com",
+    "status": "TO LEARN"
+}
+
+###
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTcyOThhMTUyOWNlMWY4YzYwZjc1OTYiLCJpYXQiOjE3MDIwMDkwMzV9.XYINl_VN9svOPJM3QxkciRaI5pC5xg7-e60aHaw-XNg
+
+
+###
+PUT http://localhost:5000/api/post/65729d44eefcac85f2a727b2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTcyOThhMTUyOWNlMWY4YzYwZjc1OTYiLCJpYXQiOjE3MDIwMDkwMzV9.XYINl_VN9svOPJM3QxkciRaI5pC5xg7-e60aHaw-XNg
+
+{
+    "title": "this is updated kim's title5",
+    "description": "this is description5 of kim",
+    "url": "google.com",
+    "status": "TO LEARN"
+}
+
+###
+DELETE http://localhost:5000/api/post/657299e19192990f08f91f38
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2NTcyOThhMTUyOWNlMWY4YzYwZjc1OTYiLCJpYXQiOjE3MDIwMDkwMzV9.XYINl_VN9svOPJM3QxkciRaI5pC5xg7-e60aHaw-XNg
